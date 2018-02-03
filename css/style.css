@@ -1,0 +1,164 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #3c3c3c;
+}
+.container{
+    margin: 60px auto;
+    width: 86%;
+}
+header{
+    height: 50px;
+    margin-right: 23px;
+    border-bottom: 2px solid #C7C6C6;
+}
+input{
+    height: 27px;
+    border: 2px solid #F4F4F4;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+button{
+    background-color: #27669D;
+    border-color: #27669D;
+    color: #fff;
+    font-weight: bold;
+    font-size: 11px;
+    height: 32px;
+    width: 46px;
+    border-radius: 4px;
+    border-style: none;
+    box-shadow: none;
+    margin-left: 5px;
+    cursor: pointer;
+}
+#add-user{
+    display: flex;
+}
+.required{
+    outline-color: #CE3338;
+    outline-style: auto;
+}
+section{
+    margin-top: 19px;
+}
+.sort{
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+ul{
+    padding-left: 0px;
+    display: flex;
+}
+li{
+    list-style: none;
+    margin-left: 10px;
+}
+ul li:nth-child(1){
+    margin-left: 0px;
+}
+li a{
+    color: black;
+    text-decoration: inherit;
+}
+a:hover{
+    color: #02BDFB;
+}
+.active a{
+    color: #02BDFB;
+}
+.sort li span{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border-right: 6px solid #fff;
+    border-top: 6px solid #fff;
+    transform: rotate(225deg);
+    margin-bottom: 1px;
+}
+.active span{
+    border-right: 6px solid #02BDFB !important;
+}
+.active[sort="desc"] span{
+    transform: rotate(45deg);
+}
+.card-container{
+    min-height: 250px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+.card{
+    width: 203px;
+    height: 305px;
+    border: 1px solid #DCD2D2;
+    border-radius: 5px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    margin-right: 24px;
+    position: relative;
+}
+.card:nth-child(1){
+    margin-left: 0px;
+}
+.card:hover {
+    border: 1px solid #02BDFB;
+}
+.card img{
+    width: 183px;
+    height: 176px;
+    margin: 10px;
+}
+.user-info{
+    height: 104px;
+    cursor: pointer;
+}
+.card:hover span.delete {
+    background: #fff;
+}
+.card span.delete{
+    position: absolute;
+    right: 15px;
+    color: #000;
+    top: 15px;
+    font-size: 10px;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    padding: 2px;
+    text-align: center;
+    line-height: 1.5;
+    transition: all 300ms;
+}
+.card div.name{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 10px 5px;
+}
+.card div.location,
+.card div.followers{
+    margin: 0px 10px;
+    font-size: 14px;
+}
+.loader{
+    background-image: url("../images/loader.gif");
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-top: -25px;
+    margin-left: -25px;
+}
+@keyframes card-animation{
+    box-sizing: border-box;
+    border: 2px solid silver;
+}
+.card-animate{
+    animation-name: card-animation;
+    animation-duration: 3s;
+}
